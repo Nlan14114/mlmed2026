@@ -24,10 +24,10 @@
 \maketitle
 
 \section{Introduction}
-Electrocardiogram (ECG) is a standard tool used in medical practice to identify cardiac abnormalities. This report presents the implementation of a machine learning model to categorize ECG heartbeats using the MIT-BIH Arrhythmia Database. The objective is to classify heartbeats into five distinct categories as defined by the Association for the Advancement of Medical Instrumentation (AAMI).
+\hspace{0.3cm}Electrocardiogram (ECG) is a standard tool used in medical practice to identify cardiac abnormalities. This report presents the implementation of a machine learning model to categorize ECG heartbeats using the MIT-BIH Arrhythmia Database. The objective is to classify heartbeats into five distinct categories as defined by the Association for the Advancement of Medical Instrumentation (AAMI).
 
 \section{Dataset Description}
-The dataset used for this practical work is the \textbf{MIT-BIH Arrhythmia Database} (downloaded from Kaggle).
+\hspace{0.3cm}The dataset used for this practical work is the \textbf{MIT-BIH Arrhythmia Database} (downloaded from Kaggle).
 \begin{itemize}
     \item \textbf{Source:} Kaggle (Heartbeat Categorization Dataset).
     \item \textbf{Train set:} 87,554 samples.
@@ -46,12 +46,12 @@ The dataset used for this practical work is the \textbf{MIT-BIH Arrhythmia Datab
 \section{Methodology}
 
 \subsection{Model Selection}
-Instead of using Deep Learning (CNN), I experimented with a classic Machine Learning approach: the \textbf{Random Forest Classifier}. 
+\hspace{0.3cm}Instead of using Deep Learning (CNN), a classic Machine Learning was experimented: the \textbf{Random Forest Classifier}. 
 
 \textbf{Reason for selection:} Random Forest is an ensemble learning method that fits a number of decision tree classifiers on various sub-samples of the dataset. It is known for high accuracy on tabular/structured data and robustness against overfitting.
 
 \subsection{Implementation Details}
-The model was implemented using Python and the \texttt{scikit-learn} library.
+\hspace{0.3cm}The model was implemented using Python and the \texttt{scikit-learn} library.
 \begin{itemize}
     \item \textbf{Preprocessing:} The raw 187 time-series points were used directly as features ($X$). No complex signal filtering was applied, demonstrating the model's ability to learn from raw data.
     \item \textbf{Model Architecture:} Random Forest Classifier.
@@ -65,7 +65,7 @@ The model was implemented using Python and the \texttt{scikit-learn} library.
 \section{Results and Analysis}
 
 \subsection{Overall Performance}
-The model was evaluated on the Test set (21,892 samples) and achieved excellent results:
+\hspace{0.3cm}The model was evaluated on the Test set (21,892 samples) and achieved excellent results:
 \begin{itemize}
     \item \textbf{Accuracy:} \textbf{97.30\%}
     \item \textbf{Macro Average F1-score:} \textbf{0.86}
@@ -73,7 +73,7 @@ The model was evaluated on the Test set (21,892 samples) and achieved excellent 
 \end{itemize}
 
 \subsection{Detailed Classification Report}
-Below is the detailed performance for each class based on the experiment results:
+\hspace{0.3cm}Below is the detailed performance for each class based on the experiment results:
 
 \begin{table}[ht]
 \centering
@@ -94,7 +94,7 @@ Unknown (4) & 1.00 & 0.94 & 0.97 \\
 \end{table}
 
 \subsection{Confusion Matrix Visualization}
-Figure \ref{fig:matrix} visualizes the performance of the model across all classes. It helps identify where the model makes errors (e.g., distinguishing between Fusion beats and Normal beats).
+\hspace{0.3cm}Figure \ref{fig:matrix} visualizes the performance of the model across all classes. It helps identify where the model makes errors (e.g., distinguishing between Fusion beats and Normal beats).
 
 \begin{figure}[ht]
     \centering
@@ -104,11 +104,11 @@ Figure \ref{fig:matrix} visualizes the performance of the model across all class
 \end{figure}
 
 \subsection{Comparison with Original Paper}
-According to the dataset description, the original paper using a Convolutional Neural Network (CNN) achieved an accuracy of approximately \textbf{93.4\%}.
+\hspace{0.3cm}According to the dataset description, the original paper using a Convolutional Neural Network (CNN) achieved an accuracy of approximately \textbf{93.4\%}.
 
-My implementation using Random Forest achieved \textbf{97.30\%}, which is higher than the baseline. This suggests that for this specific pre-processed version of the MIT-BIH dataset, ensemble methods like Random Forest can perform exceptionally well without the high computational cost of Deep Learning.
+The implementation using Random Forest achieved \textbf{97.30\%}, which is higher than the baseline. This suggests that for this specific pre-processed version of the MIT-BIH dataset, ensemble methods like Random Forest can perform exceptionally well without the high computational cost of Deep Learning.
 
 \section{Conclusion}
-In this practical work, I successfully built a Random Forest model to classify arrhythmia heartbeats. The model reached an accuracy of 97.30\%, surpassing the reference baseline. While the model performs perfectly on Normal beats (Recall = 1.00), it still faces challenges with minority classes like Fusion beats (Recall = 0.58), which could be improved in future work by using more advanced data augmentation techniques.
+\hspace{0.3cm}This practical work successfully built a Random Forest model to classify arrhythmia heartbeats. The model reached an accuracy of 97.30\%, surpassing the reference baseline. While the model performs perfectly on Normal beats (Recall = 1.00), it still faces challenges with minority classes like Fusion beats (Recall = 0.58), which could be improved in future work by using more advanced data augmentation techniques.
 
 \end{document}
