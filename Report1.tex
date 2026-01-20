@@ -1,13 +1,12 @@
-\documentclass[twocolumn, a4paper, 10pt]{article} % Thêm twocolumn và giảm size chữ xuống 10pt cho chuẩn báo khoa học
+\documentclass[twocolumn, a4paper, 10pt]{article}  
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{hyperref}
-\usepackage{titlesec} % Để chỉnh sửa khoảng cách tiêu đề nếu cần
+\usepackage{titlesec} 
 
-% Cấu hình lề trang (Giảm lề một chút để cột rộng hơn)
 \geometry{
  a4paper,
  left=15mm,
@@ -76,7 +75,6 @@ The model was evaluated on the Test set (21,892 samples) and achieved excellent 
 \subsection{Detailed Classification Report}
 Below is the detailed performance for each class based on the experiment results:
 
-% Dùng resizebox để bảng tự co nhỏ cho vừa cột
 \begin{table}[ht]
 \centering
 \resizebox{\columnwidth}{!}{%
@@ -100,7 +98,6 @@ Figure \ref{fig:matrix} visualizes the performance of the model across all class
 
 \begin{figure}[ht]
     \centering
-    % Dùng columnwidth thay vì textwidth
     \includegraphics[width=\columnwidth]{confusion_matrix.png} 
     \caption{Confusion Matrix of Random Forest Model on Test Set}
     \label{fig:matrix}
